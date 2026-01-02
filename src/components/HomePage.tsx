@@ -10,8 +10,7 @@ export const HomePage = () => {
   return(
     <>
       <div className="flex">
-
-        {/* carrito de compra */}
+        {/* Sidebar - carrito de compra */}
         <CarritoCompra />
 
         {/* Libros */}

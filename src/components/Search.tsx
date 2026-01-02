@@ -10,7 +10,7 @@ export const Search = ({ placeholder = 'Buscar', onLabelBuscar}: Props) => {
     //Hook useState (variable, funcion que cambia la variable, estado inicial de la variable)
     const [palabra, setPalabra] = useState('');
 
-    //Hook useEffect se dispara tan luego nuestro componente es montado. Ca da vez que la palabra cambia, se ejecuta.
+    //Hook useEffect se dispara cada vez que cambia la palabra.
     //useEffect(callback, [dependencias que detonan el useEffect])
     useEffect(() => {
 
@@ -30,7 +30,7 @@ export const Search = ({ placeholder = 'Buscar', onLabelBuscar}: Props) => {
             <input 
                 type="text" 
                 placeholder={ placeholder }
-                // value={palabra}
+                value={palabra}
                 onChange={(event) => setPalabra(event.target.value)}
             />
 

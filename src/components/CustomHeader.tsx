@@ -21,6 +21,7 @@ export const CustomHeader = () => {
 
   return(
     <div className="content-center">
+      {/* Nombre */}
       <h1>Relatos de Papel</h1>
       <p>Descubre y compra tu libro favorito</p>
 

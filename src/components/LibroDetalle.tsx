@@ -11,6 +11,7 @@ export const LibroDetalle = ({objetoLibro}: Props) => {
 
     return(
       <div>
+        {/* Imagen */}
         <div className="w-full flex justify-center">
           <img
            src={objetoLibro.url} alt={objetoLibro.title}
@@ -18,12 +19,18 @@ export const LibroDetalle = ({objetoLibro}: Props) => {
           />
         </div>
 
+        {/* titulo */}
         <h1 className="text-yellow-800">{objetoLibro.title}</h1>
+
+        {/* autor */}
         <p className="pl-10 text-white">{objetoLibro.autor}</p>
+
+        {/* Precio */}
         <p className="pl-10 pb-8 text-white">
           S/ {objetoLibro.price.toFixed(2)}
         </p>
 
+        {/* Reseña */}
         <h2 className="pl-10 text-white">Reseña</h2>
         <p className="pl-10 pr-10">
           Pasando a la década de 1960, el Lorem Ipsum fue popularizado por el fabricante de tipografía Letraset, que lo utilizó en sus campañas publicitarias. 

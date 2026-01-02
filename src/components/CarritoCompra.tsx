@@ -3,6 +3,7 @@ import { GlobalContext } from "../context/GlobalContext";
 
 export const CarritoCompra = () => {
 
+  //Recuperamos las variables del Global Context
   const { carrito, eliminarLibroCarrito, totalPagar, limpiarCarrito  } = useContext(GlobalContext);
   
   const handlePagar = () => {
@@ -17,6 +18,7 @@ export const CarritoCompra = () => {
 
       <div className="flex-1 overflow-y-auto text-black">
         {
+          //En caso no encuentre nada en el carrito
           carrito.length === 0 ? (
             <p className="text-gray-500 text-sm">
               No hay productos en tu carrito de compras.
@@ -28,15 +30,17 @@ export const CarritoCompra = () => {
                   key={libro.id}
                   className="flex justify-between items-center text-sm border-b pb-2"
                 >
+                  {/* Muestra el Titulo y la cantidad */}
                   <span className="flex-1">
-                    {libro.title} | <strong>CANTIDAD: {libro.quantity}</strong>
-                     
+                    {libro.title} | <strong>CANTIDAD: {libro.quantity}</strong> 
                   </span>
 
+                  {/* Subtotal */}
                   <span className="ml-2 font-medium">
                     S/ {libro.subtotal.toFixed(2)}
                   </span>
 
+                  {/*Boton Borrar*/}
                   <button
                     onClick={() => eliminarLibroCarrito(libro.id)}
                     className="bg-teal-300 text-gray-800 hover:bg-yellow-400 px-1 py-1 rounded-lg cursor-pointer ml-4"
