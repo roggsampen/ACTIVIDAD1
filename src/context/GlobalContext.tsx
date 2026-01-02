@@ -2,7 +2,7 @@ import { createContext, type Dispatch, type ReactNode, type SetStateAction } fro
 import { useLibro } from "../hooks/useLibro";
 import type { Libro } from "../libros-data/libros";
 import { useBuscar } from "../hooks/useBuscar";
-import { useCarrito } from "../hooks/useCarrito2";
+import { useCarrito } from "../hooks/useCarrito";
 import type { LibroCarrito } from "../hooks/useCarrito";
 
 // interfaces
